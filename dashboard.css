@@ -1,0 +1,67 @@
+dashboard {
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.dashboard-title {
+    cursor: pointer;
+    padding: 15px;
+    background: #0073e6;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 18px;
+    transition: background 0.3s ease-in-out;
+}
+
+.dashboard-title:hover {
+    background: #005bb5;
+}
+
+.dashboard-content {
+    margin-top: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    background: #f8f9fa;
+}
+
+.recent-activities, .upcoming-deadlines {
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 10px;
+    background: white;
+}
+
+.recent-activities ul, .upcoming-deadlines ul {
+    list-style: none;
+    padding: 0;
+}
+
+.recent-activities li, .upcoming-deadlines li {
+    padding: 8px 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+}
+
+.recent-activities li:last-child, .upcoming-deadlines li:last-child {
+    border-bottom: none;
+}
+
+.time {
+    display: block;
+    font-size: 12px;
+    color: #888;
+    margin-top: 3px;
+}
+
+.deadline-task {
+    font-weight: bold;
+}
+
+.deadline-date {
+    color: #d9534f;
+    font-weight: bold;
+}
