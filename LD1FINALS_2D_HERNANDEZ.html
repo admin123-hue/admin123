@@ -1,0 +1,81 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Login Page</title>
+  <style>
+    body {
+
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: url('FF.jpg');
+    }
+    .login-container {
+      background: url('FF.jpg');
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #c8edd1;
+      border: none;
+      color: rgb(0, 0, 0);
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:disabled {
+      background: gray;
+      cursor: not-allowed;
+    }
+    #errorMsg {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="loginForm">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit" id="loginBtn">Login</button>
+      <p id="errorMsg"></p>
+    </form>
+  </div>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
+      let errorMsg = document.getElementById("errorMsg");
+      let loginBtn = document.getElementById("loginBtn");
+      let validUsername = "admin";
+      let validPassword = "123";
+      if (username === validUsername && password === validPassword) {
+        window.location.href = "Hernandez.html";
+      } else {
+        errorMsg.textContent = "Invalid login. Try again in 10 seconds.";
+        loginBtn.disabled = true;
+        setTimeout(() => {
+          loginBtn.disabled = false;
+          errorMsg.textContent = "";
+        }, 10000);
+      }
+    });
+  </script>
+</body>
+</html>
