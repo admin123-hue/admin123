@@ -1,0 +1,36 @@
+features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+}
+
+.feature {
+    display: flex;
+    align-items: center;
+    background-color: #0073e6;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    transition: background-color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.feature:hover {
+    background-color: #005bb5;
+}
+
+.feature img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.feature h3 {
+    margin: 0;
+    font-size: 18px;
+}
